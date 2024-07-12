@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+    padding: 0;
+}
+body{
+    background-color: rgb(213, 233, 230);
+}
+.content{
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+.nav{
+    border: solid rgb(60, 255, 0) 2px;
+    
+    min-height: 100px;
+}
+.cuerpo{
+    border: solid red 2px;
+    flex: 1;
+    display: flex;
+
+}
+
+.calculadora{
+   
+    min-width: 600px;
+    padding-top: 5px;
+    background-color: rgb(95, 219, 219);
+    /*background-image: url(prueba.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    
+
+}
+.content-fot{
+    min-height: 100px;
+
+}
+.formulario{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.titulo-form{
+    text-align: center;
+    font-weight: 100;
+}
+.formulario input{
+    max-width: 200px;
+    border-radius: 5px;
+    padding: 2px 3px;
+    border: none;
+    font-size: 1rem;
+    background-color: aliceblue;
+}
+.caja label{
+    font-size: 1.2rem;
+    min-width: 120px;
+    font-weight: 540;
+    /*color: white;*/
+    font-weight: 600;
+}
+.caja{
+    padding: 15px 10px;
+    display: flex;
+}
+.formulario button{
+    max-width: 200px;
+    padding: 10px;
+    margin: 0 6px;
+    border-radius: 8px;
+    border: none;
+font-weight: 800;
+    
+}
