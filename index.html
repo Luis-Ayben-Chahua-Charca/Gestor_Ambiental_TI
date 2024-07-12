@@ -26,43 +26,99 @@
           <form class="formulario" action="" method="get">
             <div class="caja">
               <label for="id-ph">PH</label>
-              <input type="number" id="id-ph" placeholder=" Ingrese PH" />
+              <input
+                type="number"
+                id="id-ph"
+                placeholder=" Ingrese PH"
+                step="0.1"
+                required
+              />
+              <span id="ph-result"></span>
             </div>
             <div class="caja">
               <label for="id-turbiedad">Turbiedad</label>
-              <input type="number" id="id-turbiedad" placeholder="Ingrese Turbiedad" />
+              <input
+                type="number"
+                id="id-turbiedad"
+                placeholder="Ingrese Turbiedad"
+                step="0.1"
+                required
+              />
+              <span id="turbiedad-result"></span>
             </div>
 
             <div class="caja">
-              <label for="id-cloro">Cloro</label>
-              <input type="number" id="id-cloro" placeholder="Ingrese Cloro" />
+              <label for="id-cloro">Cloro(mg/L)</label>
+              <input
+                type="number"
+                id="id-cloro"
+                placeholder="Ingrese Cloro"
+                step="0.1"
+                required
+              />
+              <span id="cloro-result"></span>
             </div>
             <div class="caja">
-              <label for="id-nitratos">Nitratos</label>
-              <input type="number" id="id-nitratos" placeholder="Ingrese Nitratos" />
+              <label for="id-nitratos">Nitratos(mg/L)</label>
+              <input
+                type="number"
+                id="id-nitratos"
+                placeholder="Ingrese Nitratos"
+                step="0.1"
+                required
+              />
+              <span id="nitratos-result"></span>
             </div>
 
             <div class="caja">
-              <label for="id-cloruros">Cloruros</label>
-              <input type="number" id="id-cloruros" placeholder="Ingrese Cloruros" />
+              <label for="id-cloruros">Cloruros(mg/L)</label>
+              <input
+                type="number"
+                id="id-cloruros"
+                placeholder="Ingrese Cloruros"
+                step="0.1"
+                required
+              />
+              <span id="cloruros-result"></span>
             </div>
 
             <div class="caja">
-              <label for="id-flour">Flour</label>
-              <input type="number" id="id-flour" placeholder="Ingrese Flour" />
+              <label for="id-fluor">Flour(mg/L)</label>
+              <input
+                type="number"
+                id="id-fluor"
+                placeholder="Ingrese Flour"
+                step="0.1"
+                required
+              />
+              <span id="fluor-result"></span>
             </div>
 
             <div class="caja">
-              <label for="id-sodios">Sodios</label>
-              <input type="number" id="id-sodios" placeholder="Ingrese Sodios" />
+              <label for="id-sodios">Sodios(mg/L)</label>
+              <input
+                type="number"
+                id="id-sodios"
+                placeholder="Ingrese Sodios"
+                step="0.1"
+                required
+              />
+              <span id="sodios-result"></span>
             </div>
 
             <div class="caja">
-              <label for="id-conductividad">Contuctividad</label>
-              <input type="number" id="id-conductividad" placeholder="Ingrese conductividad" />
+              <label for="id-conductividad">Contuctividad(μS/cm)</label>
+              <input
+                type="number"
+                id="id-conductividad"
+                placeholder="Ingrese conductividad"
+                step="0.1"
+                required
+              />
+              <span id="conductividad-result"></span>
             </div>
 
-            <button type="submit">VERFICAR</button>
+            <button class="verificar" type="button" id="verificar-btn">VERFICAR</button>
           </form>
         </article>
       </main>
@@ -73,5 +129,6 @@
         fuga neque.
       </footer>
     </div>
+    <script src="static.js"></script>
   </body>
 </html>
