@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calidad de agua</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header class="nav">
+        <img src="/img/logo.png" alt="" />
+        <h1>TIF Tecnologias de informacion</h1>
+      </header>
+      <main class="cuerpo">
+        <article class="graficos">
+          <div class="parte1">
+            <h1>Calidad de Agua en Pueblos Jóvenes</h1>
+            <p>
+              El agua potable segura es vital. En los pueblos jóvenes de Perú,
+              controlar factores como el pH, la turbidez y los nitratos entre
+              otros es crucial para la salud. ¡Participa en la mejora del agua
+              en tu comunidad!
+            </p>
+          </div>
+        </article>
+        <article class="calculadora">
+          <div class="caja-calculadora">
+            <h2 class="titulo-form">Calidad de agua</h2>
+            <form class="formulario" action="" method="get">
+              <div class="caja">
+                <label for="id-ph">PH</label>
+                <input
+                  type="number"
+                  id="id-ph"
+                  placeholder=" Ingrese PH"
+                  step="0.1"
+                  required
+                />
+                <span id="ph-result"></span>
+              </div>
+              <div class="caja">
+                <label for="id-turbiedad">Turbiedad</label>
+                <input
+                  type="number"
+                  id="id-turbiedad"
+                  placeholder="Ingrese Turbiedad"
+                  step="0.1"
+                  required
+                />
+                <span id="turbiedad-result"></span>
+              </div>
+
+              <div class="caja">
+                <label for="id-cloro">Cloro(mg/L)</label>
+                <input
+                  type="number"
+                  id="id-cloro"
+                  placeholder="Ingrese Cloro"
+                  step="0.1"
+                  required
+                />
+                <span id="cloro-result"></span>
+              </div>
+              <div class="caja">
+                <label for="id-nitratos">Nitratos(mg/L)</label>
+                <input
+                  type="number"
+                  id="id-nitratos"
+                  placeholder="Ingrese Nitratos"
+                  step="0.1"
+                  required
+                />
+                <span id="nitratos-result"></span>
+              </div>
+
+              <div class="caja">
+                <label for="id-cloruros">Cloruros(mg/L)</label>
+                <input
+                  type="number"
+                  id="id-cloruros"
+                  placeholder="Ingrese Cloruros"
+                  step="0.1"
+                  required
+                />
+                <span id="cloruros-result"></span>
+              </div>
+
+              <div class="caja">
+                <label for="id-fluor">Flour(mg/L)</label>
+                <input
+                  type="number"
+                  id="id-fluor"
+                  placeholder="Ingrese Flour"
+                  step="0.1"
+                  required
+                />
+                <span id="fluor-result"></span>
+              </div>
+
+              <div class="caja">
+                <label for="id-sodios">Sodios(mg/L)</label>
+                <input
+                  type="number"
+                  id="id-sodios"
+                  placeholder="Ingrese Sodios"
+                  step="0.1"
+                  required
+                />
+                <span id="sodios-result"></span>
+              </div>
+
+              <div class="caja">
+                <label for="id-conductividad">Contuctividad(μS/cm)</label>
+                <input
+                  type="number"
+                  id="id-conductividad"
+                  placeholder="Ingrese conductividad"
+                  step="0.1"
+                  required
+                />
+                <span id="conductividad-result"></span>
+              </div>
+
+              <button class="verificar" type="button" id="verificar-btn">
+                VERFICAR
+              </button>
+
+              <div class="caja-resul">
+                <span id="icarhs-result"></span>
+              </div>
+            </form>
+          </div>
+        </article>
+      </main>
+      <section class="consejos">
+        <h2>Consejos para proteger la salud</h2>
+        <div class="caja-main-consejos">
+          <article class="caja-consejo">
+            <img src="/img/filtro.jpg" alt="" />
+            <div>
+              <h3>Utilizar Filtros de Agua</h3>
+              <p>
+                Instalar filtros de agua en casa para eliminar contaminantes
+                comunes como cloro, plomo y bacterias. Cambio Regular Asi
+                Asegurarse de cambiar los filtros de agua según las
+                recomendaciones del fabricante para mantener su eficacia.
+              </p>
+            </div>
+          </article>
+          <article class="caja-consejo">
+            <img src="/img/hervir agua.jpg" alt="" />
+            <div>
+              <h3>Hervir el Agua</h3>
+              <p>
+                Siempre hacer hervir agua para que pueda matar la mayoría de los
+                patógenos y bacterias ya asi asegurarnos de el agua sea
+                consumible.
+              </p>
+            </div>
+          </article>
+          <article class="caja-consejo">
+            <img src="/img/botella.jpg" alt="" />
+            <div>
+              <h3>Consumo de Agua Embotellada</h3>
+              <p>
+                Optar por agua embotellada si la calidad del agua del grifo no
+                es segura, especialmente en situaciones de emergencia. como en
+                corter de agua y no se cuenta con un cisterna proporcionado por
+                la empresa de agua (SEDAPAR)
+              </p>
+            </div>
+          </article>
+          <article class="caja-consejo">
+            <img src="/img/Kit-de-monitoreo.jpg" alt="" />
+            <div>
+              <h3>Monitoreo y Reporte de Problemas en el servicio</h3>
+              <p>
+                Revisar periódicamente la calidad del agua en casa utilizando
+                kits de prueba disponibles en el mercado.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <footer class="content-fot">
+        <section>TIF TI 2024| Reservados todos los derechos</section>
+        <section>
+          Términos y condiciones_Política de privacidad
+        </section>
+      </footer>
+    </div>
+    <script src="static.js"></script>
+  </body>
+</html>
