@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calidad de agua</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"/>
   </head>
   <body>
     <div class="content">
       <header class="nav">
-        <img src="/img/logo.png" alt="" />
+        <img src="{% static 'img/logo.png' %}" alt="" />
         <h1>TIF Tecnologias de informacion</h1>
       </header>
       <main class="cuerpo">
@@ -27,14 +28,16 @@
         <article class="calculadora">
           <div class="caja-calculadora">
             <h2 class="titulo-form">Calidad de agua</h2>
-            <form class="formulario" action="" method="get">
+            <form class="formulario" action="" method="post" id="water-quality-form">
+              {% csrf_token %}
               <div class="caja">
                 <label for="id-ph">PH</label>
                 <input
                   type="number"
                   id="id-ph"
-                  placeholder=" Ingrese PH"
-                  step="0.1"
+                  name="ph"  
+                  placeholder="Ingrese PH"
+                  step="0.01"
                   required
                 />
                 <span id="ph-result"></span>
@@ -44,88 +47,91 @@
                 <input
                   type="number"
                   id="id-turbiedad"
+                  name="turbiedad" 
                   placeholder="Ingrese Turbiedad"
-                  step="0.1"
+                  step="0.01"
                   required
                 />
                 <span id="turbiedad-result"></span>
               </div>
-
               <div class="caja">
-                <label for="id-cloro">Cloro(mg/L)</label>
+                <label for="id-cloro">Cloro (mg/L)</label>
                 <input
                   type="number"
                   id="id-cloro"
+                  name="cloro" 
                   placeholder="Ingrese Cloro"
-                  step="0.1"
+                  step="0.01"
                   required
                 />
                 <span id="cloro-result"></span>
               </div>
               <div class="caja">
-                <label for="id-nitratos">Nitratos(mg/L)</label>
+                <label for="id-nitratos">Nitratos (mg/L)</label>
                 <input
                   type="number"
                   id="id-nitratos"
+                  name="nitratos"  
                   placeholder="Ingrese Nitratos"
-                  step="0.1"
+                  step="0.01"
                   required
                 />
                 <span id="nitratos-result"></span>
               </div>
-
               <div class="caja">
-                <label for="id-cloruros">Cloruros(mg/L)</label>
+                <label for="id-cloruros">Cloruros (mg/L)</label>
                 <input
                   type="number"
                   id="id-cloruros"
+                  name="cloruros"  
                   placeholder="Ingrese Cloruros"
-                  step="0.1"
+                  step="0.01"
                   required
                 />
                 <span id="cloruros-result"></span>
               </div>
-
               <div class="caja">
-                <label for="id-fluor">Flour(mg/L)</label>
+                <label for="id-fluor">Fluor (mg/L)</label>
                 <input
                   type="number"
                   id="id-fluor"
-                  placeholder="Ingrese Flour"
-                  step="0.1"
+                  name="fluor"  
+                  placeholder="Ingrese Fluor"
+                  step="0.01"
                   required
                 />
                 <span id="fluor-result"></span>
               </div>
-
               <div class="caja">
-                <label for="id-sodios">Sodios(mg/L)</label>
+                <label for="id-sodios">Sodios (mg/L)</label>
                 <input
                   type="number"
                   id="id-sodios"
+                  name="sodios" 
                   placeholder="Ingrese Sodios"
-                  step="0.1"
+                  step="0.01"
                   required
                 />
                 <span id="sodios-result"></span>
               </div>
-
               <div class="caja">
-                <label for="id-conductividad">Contuctividad(μS/cm)</label>
+                <label for="id-conductividad">Conductividad (μS/cm)</label>
                 <input
                   type="number"
                   id="id-conductividad"
-                  placeholder="Ingrese conductividad"
-                  step="0.1"
+                  name="conductividad" 
+                  placeholder="Ingrese Conductividad"
+                  step="0.01"
                   required
                 />
                 <span id="conductividad-result"></span>
               </div>
-
+              <input type="hidden" name="resultado" id="resultado" />
+              <input type="hidden" name="ica" id="ica" />
               <button class="verificar" type="button" id="verificar-btn">
-                VERFICAR
+                VERIFICAR
               </button>
-
+              <button type="submit">Enviar</button>
               <div class="caja-resul">
                 <span id="icarhs-result"></span>
               </div>
@@ -137,7 +143,7 @@
         <h2>Consejos para proteger la salud</h2>
         <div class="caja-main-consejos">
           <article class="caja-consejo">
-            <img src="/img/filtro.jpg" alt="" />
+            <img src="{% static 'img/filtro.jpg' %}" alt="" />
             <div>
               <h3>Utilizar Filtros de Agua</h3>
               <p>
@@ -149,7 +155,7 @@
             </div>
           </article>
           <article class="caja-consejo">
-            <img src="/img/hervir agua.jpg" alt="" />
+            <img src="{% static 'img/hervir agua.jpg' %}" alt="" />
             <div>
               <h3>Hervir el Agua</h3>
               <p>
@@ -160,7 +166,7 @@
             </div>
           </article>
           <article class="caja-consejo">
-            <img src="/img/botella.jpg" alt="" />
+            <img src="{% static 'img/botella.jpg' %}" alt="" />
             <div>
               <h3>Consumo de Agua Embotellada</h3>
               <p>
@@ -172,7 +178,7 @@
             </div>
           </article>
           <article class="caja-consejo">
-            <img src="/img/Kit-de-monitoreo.jpg" alt="" />
+            <img src="{% static 'img/Kit-de-monitoreo.jpg' %}" alt="" />
             <div>
               <h3>Monitoreo y Reporte de Problemas en el servicio</h3>
               <p>
@@ -190,6 +196,6 @@
         </section>
       </footer>
     </div>
-    <script src="static.js"></script>
+    <script src="{% static 'js/static.js' %}"></script>
   </body>
 </html>
